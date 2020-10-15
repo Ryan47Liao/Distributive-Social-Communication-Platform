@@ -173,32 +173,5 @@ def File_Exp(entry = None,test_mod = False):
         #Finally 
         if test_mod:
                 break
-        
-    
-        
-# Testing Mod
-TEST = {}
-#Part 1
-TEST["test0"] = "Q"
-TEST["test1"] = "L C:\\Test"
-TEST["test2"] = "L C:\\Test -r"
-TEST["test3"] = "L C:\\Test -f"
-TEST["test4"] = "L C:\\Test -r -s file1-2-1.txt"
-TEST["test5"] = "L C:\\Test -s file1-2-1.txt"
-TEST["test6"] = "L C:\\Test -r -e txt"
-TEST["test7"] = "L C:\\Test -e txt"
-#Part 2
-TEST["test8"] = "C C:\\Test\\foo2\\foo2-1 -n LeonidasLiao"
-TEST["test9"] = "R C:\\Test\\foo2\\foo2-1\\LeonidasLiao.dsu"
-TEST["test10"] = "D C:\\Test\\foo2\\foo2-1\\LeonidasLiao.dsu"
-
-def a1_test(TEST):
-    "Test a series of cmds, captured in TEST dictionary"
-    for test in TEST.keys():
-        entry = TEST[test]
-        print(test,end = " ") #Which test 
-        print("entry【{}】\n".format(entry))#What was the test entry
-        File_Exp(entry,test_mod = True)
-        print("✅")
 
 File_Exp()    
